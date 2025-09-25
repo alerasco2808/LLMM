@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+
+<book1>
+    <name>Platero y yo</name>
+    <author>Juan Ramon Jimenez</author>
+    <price>10€</price>
+
+</book1>
+<book2>
+    <name>El principito</name>
+    <author>Antoine de Saint-Exupéry</author>
+    <price>6€</price>
+</book2>
+
+
+</library>
