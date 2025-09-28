@@ -1,3 +1,24 @@
+# Titulo
+
+Titulo de ejemplo de **Markdown**.
+
+---
+
+## Subtitulo
+
+---
+
+### Lista de elementos importantes
+
+- Ejemplo lista 1
+- Ejemplo lista 2
+- Ejemplo lista 3
+
+---
+
+### Ejemplo de gráfico
+
+```mermaid
 flowchart TD
     A[Ejemplo1] --> B[Ejemplo2]
     B --> C[Ejemplo3]
