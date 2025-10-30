@@ -1,0 +1,43 @@
+/* Simplified stylesheet to match the plain example look */
+/* Keep typography close to browser defaults (serif) but normalize spacing */
+body {
+  margin: 20px;
+  color: #111;
+  font-family: Times, 'Times New Roman', serif;
+}
+/* Logo image used in header (patologo.JPG) */
+.logo {
+  height: 48px;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+/* Simple horizontal nav using inline links separated by pipes in HTML; ensure links appear blue and underlined */
+nav {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+nav a {
+  color: #0000EE;
+  text-decoration: underline;
+  margin: 0 6px;
+}
+/* Heading like example: bold, large */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+/* small paragraph spacing */
+p { margin: 8px 0 }
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 16px 0;
+}
+footer {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 20px;
+}
+/* Inputs left default appearance; keep minimal styles for calculator form */
+label, input { display:block; margin:6px 0 }
