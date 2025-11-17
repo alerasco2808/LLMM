@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Menú — Lista anidada</title>
+
+	</head>
+	<body>
+		<!-- Creamos un contenedor donde poner las opciones -->
+		<div class="container">
+			<h1>Menú</h1>
+			<nav>
+				<ul>
+					<li>Inicio</li>
+					<li><strong>Noticias</strong>
+						<ul>
+							<!--Referenciamos a un "#" para no poner un enlace real-->
+							<li><a href="#">Recientes</a></li>
+							<li><a href="#">Más leídas</a></li>
+							<li><a href="#">Más valoradas</a></li>
+						</ul>
+					</li>
+                    <!--Ponemos más opciones sobre la misma lista-->
+					<li>Artículos
+						<ol class="articles">
+							<li>XHTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+							<li>Otros</li>
+						</ol>
+					</li>
+					<li>Contacto
+						<dl class="contact">
+							<dt>Email</dt>
+							<dd><strong>nombre@direccion.com</strong></dd>
+							<dt>Teléfono</dt>
+							<dd>900 900 900</dd>
+							<dt>Fax</dt>
+							<dd>900 900 900</dd>
+						</dl>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+	</html>
+

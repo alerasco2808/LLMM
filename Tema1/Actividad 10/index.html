@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Menú — Lista anidada</title>
+</head>
+<body>
+    <!-- Creamos un contenedor donde poner las tres opciones -->
+	<div class="container">
+		<h1>Menú</h1>
+		<nav>
+			<!-- Primera lista: Inicio y Noticias -->
+			<ul>
+				<li>Inicio</li>
+				<li><strong>Noticias</strong>
+					<ul>
+						<!-- Referenciamos a un "#" para no poner un enlace real -->
+						<li><a href="#">Recientes</a></li>
+						<li><a href="#">Más leídas</a></li>
+						<li><a href="#">Más valoradas</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<!-- Espacio visual sin CSS -->
+			<p>&nbsp;</p>
+
+			<!-- Segunda lista: Artículos (numerada) -->
+			<ul>
+				<li>Artículos
+					<ol>
+						<li>XHTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Otros</li>
+					</ol>
+				</li>
+			</ul>
+
+			<!-- Otro espacio para separar sección Contacto -->
+			<p>&nbsp;</p>
+
+			<!-- Tercera lista: Contacto con etiquetas semánticas -->
+			<ul>
+				<li>Contacto
+					<p><em>Email</em><br><strong>nombre@direccion.com</strong></p>
+					<p><em>Teléfono</em><br>900 900 900</p>
+					<p><em>Fax</em><br>900 900 900</p>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
+
