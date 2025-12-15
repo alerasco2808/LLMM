@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento HTML -->
+<html lang="es">
+<!-- Etiqueta raíz del documento HTML -->
+<head>
+<!-- Metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplos prácticos de 5 etiquetas HTML5: details, dialog, datalist, input color y meter.">
+    <title>Web4U - Ejemplos HTML</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<!-- Cuerpo visible de la página web -->
+<body>
+<!-- Cabecera con navegación principal -->
+    <header>
+        <div class="container">
+            <h1>Web4U - HTML</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="content.html" class="active" title="Estás en la sección de HTML">HTML</a></li>
+                    <li><a href="../css/content.html" title="Ver ejemplos de CSS">CSS</a></li>
+                    <li><a href="../svg/content.html" title="Ver ejemplos de SVG">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Contenido principal de la página -->
+    <main class="container">
+        <div class="content-layout">
+            <aside class="toc-sidebar">
+                <h3>Índice de Contenidos</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#html-details" title="Ir al ejemplo de details">1. Etiqueta &lt;details&gt;</a></li>
+                        <li><a href="#html-dialog" title="Ir al ejemplo de dialog">2. Etiqueta &lt;dialog&gt;</a></li>
+                        <li><a href="#html-datalist" title="Ir al ejemplo de datalist">3. Etiqueta &lt;datalist&gt;</a></li>
+                        <li><a href="#html-color" title="Ir al ejemplo de input color">4. Input tipo Color</a></li>
+                        <li><a href="#html-meter" title="Ir al ejemplo de meter">5. Etiqueta &lt;meter&gt;</a></li>
+                    </ul>
+                </nav>
+                <hr>
+                <a href="../pdfs/web4u-html.pdf" class="pdf-link" title="Descargar esta página en formato PDF" target="_blank">Descargar Versión PDF</a>
+            </aside>
+
+            <section class="main-content">
+                <h2>5 Etiquetas HTML Interesantes</h2>
+
+                <article id="html-details">
+                    <h3>1. La etiqueta &lt;details&gt; y &lt;summary&gt;</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Se utiliza para crear un widget interactivo que el usuario puede desplegar o contraer. Es ideal para secciones de preguntas frecuentes (FAQ) para ahorrar espacio.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+&lt;details&gt;
+    &lt;summary&gt;¿Qué es Web4U? (Haz clic)&lt;/summary&gt;
+    &lt;p&gt;Web4U es un proyecto educativo para aprender lenguajes de marca con ejemplos prácticos.&lt;/p&gt;
+&lt;/details&gt;
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap1.png" alt="Captura de un elemento details desplegado mostrando texto" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/html52/interactive-elements.html#the-details-element" target="_blank" rel="noopener noreferrer" title="Especificación W3C para details">W3C: Elemento details</a></p>
+                </article>
+                <hr>
+
+                <article id="html-dialog">
+                    <h3>2. La etiqueta &lt;dialog&gt;</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Representa una parte de la aplicación con la que el usuario interactúa para realizar una tarea, como un cuadro de diálogo o una ventana modal nativa.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+&lt;!-- Se suele usar JS para abrirlo con .showModal(), pero este es el HTML base --&gt;
+&lt;dialog open&gt;
+  &lt;p&gt;¡Hola! Soy una ventana modal nativa de HTML.&lt;/p&gt;
+  &lt;form method="dialog"&gt;
+    &lt;button&gt;Cerrar&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap2.png" alt="Captura de una ventana de diálogo modal" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" target="_blank" rel="noopener noreferrer" title="Especificación W3C para dialog">W3C: Elemento dialog</a></p>
+                </article>
+                <hr>
+
+                <article id="html-datalist">
+                    <h3>3. La etiqueta &lt;datalist&gt; (Autocompletado)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Proporciona una función de "autocompletado" en los elementos input. Los usuarios ven una lista desplegable de sugerencias pero pueden escribir libremente.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+&lt;label for="navegador"&gt;¿Qué navegador usas?&lt;/label&gt;
+&lt;input list="navegadores" name="navegador" id="navegador" placeholder="Escribe aquí..."&gt;
+
+&lt;datalist id="navegadores"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Safari"&gt;
+  &lt;option value="Edge"&gt;
+  &lt;option value="Opera"&gt;
+&lt;/datalist&gt;
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap3.png" alt="Captura de un campo de texto mostrando opciones sugeridas" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element" target="_blank" rel="noopener noreferrer" title="Especificación W3C para datalist">W3C: Elemento datalist</a></p>
+                </article>
+                <hr>
+
+                 <article id="html-color">
+                    <h3>4. El input tipo "color" (&lt;input type="color"&gt;)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Proporciona una interfaz de usuario nativa (un selector de color o "color picker") para elegir un color hexadecimal en un formulario.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+&lt;form&gt;
+  &lt;label for="color-favorito"&gt;Elige tu color favorito:&lt;/label&gt;
+  &lt;input type="color" id="color-favorito" name="color-favorito" value="#3498db"&gt;
+&lt;/form&gt;
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap4.png" alt="Captura del selector de color nativo" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)" target="_blank" rel="noopener noreferrer" title="Especificación W3C para input color">W3C: Input type color</a></p>
+                </article>
+                <hr>
+
+                 <article id="html-meter">
+                    <h3>5. La etiqueta &lt;meter&gt;</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Se usa para representar un valor numérico dentro de un rango conocido, como el uso del disco duro o estadísticas.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+&lt;p&gt;Uso del almacenamiento:&lt;/p&gt;
+&lt;meter id="disco" value="0.7" min="0" max="1" low="0.2" high="0.8" optimum="0.1"&gt;70%&lt;/meter&gt;
+&lt;label for="disco"&gt;70% ocupado&lt;/label&gt;
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap5.png" alt="Captura de una barra de medición meter" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element" target="_blank" rel="noopener noreferrer" title="Especificación W3C para meter">W3C: Elemento meter</a></p>
+                </article>
+
+            </section>
+        </div>
+    </main>
+</body>
+<!-- Fin del documento HTML -->
+</html>

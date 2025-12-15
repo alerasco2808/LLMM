@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento HTML -->
+<html lang="es">
+<!-- Etiqueta raíz del documento HTML -->
+<head>
+<!-- Metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplos prácticos de propiedades y reglas CSS: Flexbox, Grid, Transform, Box-shadow y Gradientes.">
+    <title>Web4U - Ejemplos CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Cuerpo visible de la página web -->
+<body>
+<!-- Cabecera con navegación principal -->
+    <header>
+        <div class="container">
+            <h1>Web4U - CSS</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="../html/content.html" title="Ver ejemplos de HTML">HTML</a></li>
+                    <li><a href="content.html" class="active" title="Estás en la sección de CSS">CSS</a></li>
+                    <li><a href="../svg/content.html" title="Ver ejemplos de SVG">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Contenido principal de la página -->
+    <main class="container">
+        <div class="content-layout">
+            <aside class="toc-sidebar">
+                <h3>Índice de Propiedades</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#css-flex" title="Ir al ejemplo de Flexbox">1. display: flex</a></li>
+                        <li><a href="#css-grid" title="Ir al ejemplo de Grid">2. display: grid</a></li>
+                        <li><a href="#css-transform" title="Ir al ejemplo de Transform">3. transform (Rotación)</a></li>
+                        <li><a href="#css-shadow" title="Ir al ejemplo de Box Shadow">4. box-shadow</a></li>
+                        <li><a href="#css-gradient" title="Ir al ejemplo de Gradientes">5. Linear Gradient</a></li>
+                    </ul>
+                </nav>
+                <hr>
+                <a href="../pdfs/web4u-css.pdf" class="pdf-link" title="Descargar esta página en formato PDF" target="_blank">Descargar Versión PDF</a>
+            </aside>
+
+            <section class="main-content">
+                <h2>5 Conceptos y Propiedades CSS Esenciales</h2>
+
+                <article id="css-flex">
+                    <h3>1. La propiedad `display: flex` (Flexbox)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Se utiliza para diseñar estructuras unidimensionales (en una fila o una columna). Es perfecto para alinear elementos, distribuirlos en el espacio disponible y centrarlos verticalmente con facilidad.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+.contenedor-flexible {
+    display: flex;          /* Activa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    height: 150px;
+    background-color: #eee;
+}
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap6.png" alt="Captura de una caja perfectamente centrada usando flexbox" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" rel="noopener noreferrer" title="Especificación W3C para Flexbox">W3C: CSS Flexible Box</a></p>
+                </article>
+                <hr>
+
+                <article id="css-grid">
+                    <h3>2. La propiedad `display: grid` (CSS Grid)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Es el sistema de diseño más potente para la web, diseñado para estructuras bidimensionales (filas Y columnas al mismo tiempo). Permite crear layouts complejos estilo "periódico" o galerías de imágenes fácilmente.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+.contenedor-grid {
+    display: grid;
+    /* Crea 3 columnas de igual ancho */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espacio de 10px entre celdas */
+    gap: 10px; 
+}
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap7.png" alt="Captura de una cuadrícula de 3 columnas y 2 filas creada con Grid" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" rel="noopener noreferrer" title="Especificación W3C para Grid">W3C: CSS Grid Layout</a></p>
+                </article>
+                <hr>
+
+                <article id="css-transform">
+                    <h3>3. La propiedad `transform` (Rotación fija)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Permite modificar el espacio de coordenadas del modelo visual. Se usa para rotar, escalar, inclinar o mover elementos. Es útil para crear elementos decorativos.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+.elemento-diamante {
+    width: 80px;
+    height: 80px;
+    background-color: #e74c3c;
+    /* Rota el elemento 45 grados permanentemente */
+    transform: rotate(45deg);
+    margin: 30px auto; /* Centrado */
+}
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap8.png" alt="Captura de un elemento cuadrado rojo rotado 45 grados" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/css-transforms-1/" target="_blank" rel="noopener noreferrer" title="Especificación W3C para Transforms">W3C: CSS Transforms</a></p>
+                </article>
+                <hr>
+
+                 <article id="css-shadow">
+                    <h3>4. La propiedad `box-shadow`</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Añade efectos de sombra alrededor del marco de un elemento. Se utiliza mucho en diseños modernos para dar sensación de profundidad, elevación o para destacar tarjetas y botones.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+.tarjeta-con-sombra {
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap9.png" alt="Captura de una tarjeta con una sombra suave debajo" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/css-backgrounds-3/#box-shadow" target="_blank" rel="noopener noreferrer" title="Especificación W3C para Box Shadow">W3C: CSS Box Shadow</a></p>
+                </article>
+                <hr>
+
+                 <article id="css-gradient">
+                    <h3>5. Funciones de Gradiente (Linear Gradient)</h3>
+                    <h4>Caso de Uso:</h4>
+                    <p>Permite crear una transición progresiva entre dos o más colores. Es muy utilizado en fondos modernos o botones llamativos sin necesidad de usar imágenes externas.</p>
+                    <h4>Ejemplo de Código:</h4>
+                    <pre><code>
+.fondo-gradiente {
+    height: 100px;
+    /* Crea un degradado de azul (#3498db) a morado (#8e44ad) */
+    background: linear-gradient(90deg, #3498db, #8e44ad);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+                    </code></pre>
+                    <h4>Resultado en el Navegador:</h4>
+                    <img src="../images/cap10.png" alt="Captura de una barra con degradado de azul a morado" class="result-image">
+                    <h4>Más información:</h4>
+                    <p><a href="https://www.w3.org/TR/css-images-3/#linear-gradients" target="_blank" rel="noopener noreferrer" title="Especificación W3C para Gradientes">W3C: CSS Linear Gradients</a></p>
+                </article>
+
+            </section>
+        </div>
+    </main>
+</body>
+<!-- Fin del documento HTML -->
+</html>
